@@ -1,0 +1,268 @@
+{
+	"name": "SalesforceInputData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SalesforceSource",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SalesforceObject",
+		"structure": [
+			{
+				"name": "Id",
+				"type": "String"
+			},
+			{
+				"name": "IsDeleted",
+				"type": "Boolean"
+			},
+			{
+				"name": "MasterRecordId",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Type",
+				"type": "String"
+			},
+			{
+				"name": "ParentId",
+				"type": "String"
+			},
+			{
+				"name": "BillingStreet",
+				"type": "String"
+			},
+			{
+				"name": "BillingCity",
+				"type": "String"
+			},
+			{
+				"name": "BillingState",
+				"type": "String"
+			},
+			{
+				"name": "BillingPostalCode",
+				"type": "String"
+			},
+			{
+				"name": "BillingCountry",
+				"type": "String"
+			},
+			{
+				"name": "BillingLatitude",
+				"type": "Decimal"
+			},
+			{
+				"name": "BillingLongitude",
+				"type": "Decimal"
+			},
+			{
+				"name": "BillingGeocodeAccuracy",
+				"type": "String"
+			},
+			{
+				"name": "ShippingStreet",
+				"type": "String"
+			},
+			{
+				"name": "ShippingCity",
+				"type": "String"
+			},
+			{
+				"name": "ShippingState",
+				"type": "String"
+			},
+			{
+				"name": "ShippingPostalCode",
+				"type": "String"
+			},
+			{
+				"name": "ShippingCountry",
+				"type": "String"
+			},
+			{
+				"name": "ShippingLatitude",
+				"type": "Decimal"
+			},
+			{
+				"name": "ShippingLongitude",
+				"type": "Decimal"
+			},
+			{
+				"name": "ShippingGeocodeAccuracy",
+				"type": "String"
+			},
+			{
+				"name": "Phone",
+				"type": "String"
+			},
+			{
+				"name": "Fax",
+				"type": "String"
+			},
+			{
+				"name": "AccountNumber",
+				"type": "String"
+			},
+			{
+				"name": "Website",
+				"type": "String"
+			},
+			{
+				"name": "PhotoUrl",
+				"type": "String"
+			},
+			{
+				"name": "Sic",
+				"type": "String"
+			},
+			{
+				"name": "Industry",
+				"type": "String"
+			},
+			{
+				"name": "AnnualRevenue",
+				"type": "Decimal"
+			},
+			{
+				"name": "NumberOfEmployees",
+				"type": "Int32"
+			},
+			{
+				"name": "Ownership",
+				"type": "String"
+			},
+			{
+				"name": "TickerSymbol",
+				"type": "String"
+			},
+			{
+				"name": "Description",
+				"type": "String"
+			},
+			{
+				"name": "Rating",
+				"type": "String"
+			},
+			{
+				"name": "Site",
+				"type": "String"
+			},
+			{
+				"name": "OwnerId",
+				"type": "String"
+			},
+			{
+				"name": "CreatedDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "CreatedById",
+				"type": "String"
+			},
+			{
+				"name": "LastModifiedDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "LastModifiedById",
+				"type": "String"
+			},
+			{
+				"name": "SystemModstamp",
+				"type": "DateTime"
+			},
+			{
+				"name": "LastActivityDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "LastViewedDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "LastReferencedDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "Jigsaw",
+				"type": "String"
+			},
+			{
+				"name": "JigsawCompanyId",
+				"type": "String"
+			},
+			{
+				"name": "CleanStatus",
+				"type": "String"
+			},
+			{
+				"name": "AccountSource",
+				"type": "String"
+			},
+			{
+				"name": "DunsNumber",
+				"type": "String"
+			},
+			{
+				"name": "Tradestyle",
+				"type": "String"
+			},
+			{
+				"name": "NaicsCode",
+				"type": "String"
+			},
+			{
+				"name": "NaicsDesc",
+				"type": "String"
+			},
+			{
+				"name": "YearStarted",
+				"type": "String"
+			},
+			{
+				"name": "SicDesc",
+				"type": "String"
+			},
+			{
+				"name": "DandbCompanyId",
+				"type": "String"
+			},
+			{
+				"name": "CustomerPriority__c",
+				"type": "String"
+			},
+			{
+				"name": "SLA__c",
+				"type": "String"
+			},
+			{
+				"name": "Active__c",
+				"type": "String"
+			},
+			{
+				"name": "NumberofLocations__c",
+				"type": "Decimal"
+			},
+			{
+				"name": "UpsellOpportunity__c",
+				"type": "String"
+			},
+			{
+				"name": "SLASerialNumber__c",
+				"type": "String"
+			},
+			{
+				"name": "SLAExpirationDate__c",
+				"type": "DateTime"
+			}
+		],
+		"typeProperties": {
+			"objectApiName": "Account"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
