@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "SalesforceToLocalDataFactory"
+		},
+		"SalesforceSource_password": {
+			"value": ""
+		},
+		"SalesforceSource_securityToken": {
+			"value": ""
+		},
+		"TestDataLoadingResults_connectionString": {
+			"value": ""
+		},
+		"SalesforceOutputData_properties_typeProperties_fileName": {
+			"value": "accountsInfo.txt"
+		},
+		"SalesforceOutputData_properties_typeProperties_folderPath": {
+			"value": "salesforce/output"
+		},
+		"SalesforceSource_properties_typeProperties_username": {
+			"value": "anton@self.com"
+		}
+	}
+}

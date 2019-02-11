@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "SalesforceToLocalDataFactory"
+		},
+		"SalesforceSource_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SalesforceSource'"
+		},
+		"SalesforceSource_securityToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'securityToken' of 'SalesforceSource'"
+		},
+		"TestDataLoadingResults_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'TestDataLoadingResults'"
+		},
+		"SalesforceOutputData_properties_typeProperties_fileName": {
+			"type": "string",
+			"defaultValue": "accountsInfo.txt"
+		},
+		"SalesforceOutputData_properties_typeProperties_folderPath": {
+			"type": "string",
+			"defaultValue": "salesforce/output"
+		},
+		"SalesforceSource_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "anton@self.com"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas Token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SalesforceSource_password": {
+						"value": "[parameters('SalesforceSource_password')]"
+					},
+					"SalesforceSource_securityToken": {
+						"value": "[parameters('SalesforceSource_securityToken')]"
+					},
+					"TestDataLoadingResults_connectionString": {
+						"value": "[parameters('TestDataLoadingResults_connectionString')]"
+					},
+					"SalesforceSource_properties_typeProperties_username": {
+						"value": "[parameters('SalesforceSource_properties_typeProperties_username')]"
+					},
+					"SalesforceOutputData_properties_typeProperties_fileName": {
+						"value": "[parameters('SalesforceOutputData_properties_typeProperties_fileName')]"
+					},
+					"SalesforceOutputData_properties_typeProperties_folderPath": {
+						"value": "[parameters('SalesforceOutputData_properties_typeProperties_folderPath')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
