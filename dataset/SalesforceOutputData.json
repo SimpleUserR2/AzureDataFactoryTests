@@ -270,6 +270,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
+			"fileName": "accountsInfo.txt",
 			"folderPath": "salesforce/output"
 		}
 	},
