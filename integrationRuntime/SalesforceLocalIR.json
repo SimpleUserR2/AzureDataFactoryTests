@@ -1,0 +1,6 @@
+{
+	"name": "SalesforceLocalIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
